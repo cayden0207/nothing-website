@@ -9,12 +9,12 @@ function init() {
     scene.fog = new THREE.Fog(0x000000, 30, 80);
     
     camera = new THREE.PerspectiveCamera(
-        75,
+        60,
         window.innerWidth / window.innerHeight,
         0.1,
         1000
     );
-    camera.position.z = 30;
+    camera.position.z = 25;
     
     renderer = new THREE.WebGLRenderer({
         canvas: document.getElementById('particles-canvas'),
@@ -53,7 +53,7 @@ function createTrails() {
             line: line,
             offset: Math.random() * Math.PI * 2,
             speed: 0.3 + Math.random() * 0.4,
-            radius: 16 + Math.random() * 4,
+            radius: 20 + Math.random() * 5,
             verticalSpeed: 0.5 + Math.random() * 0.5,
             phase: Math.random() * Math.PI * 2
         });
@@ -62,7 +62,7 @@ function createTrails() {
     }
 }
 
-function infinityPath(t, scale = 20) {
+function infinityPath(t, scale = 25) {
     const a = scale;
     const b = scale * 0.6;
     
@@ -119,8 +119,8 @@ function animate() {
         updateTrail(trail, index);
     });
     
-    camera.position.x = Math.sin(time * 0.1) * 5;
-    camera.position.y = Math.cos(time * 0.1) * 3;
+    camera.position.x = Math.sin(time * 0.1) * 3;
+    camera.position.y = Math.cos(time * 0.1) * 2;
     camera.lookAt(scene.position);
     
     renderer.render(scene, camera);
