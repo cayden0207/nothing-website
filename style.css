@@ -44,7 +44,7 @@ body {
     opacity: 0.3;
     animation: fade 4s ease-in-out infinite;
     position: absolute;
-    top: -60px;
+    top: -120px;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -53,7 +53,7 @@ body {
 
 .address-container {
     position: absolute;
-    top: calc(50% + 120px);
+    top: calc(50% + 180px);
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: auto;

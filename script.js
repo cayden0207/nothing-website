@@ -53,7 +53,7 @@ function createTrails() {
             line: line,
             offset: Math.random() * Math.PI * 2,
             speed: 0.3 + Math.random() * 0.4,
-            radius: 12 + Math.random() * 3,
+            radius: 16 + Math.random() * 4,
             verticalSpeed: 0.5 + Math.random() * 0.5,
             phase: Math.random() * Math.PI * 2
         });
@@ -62,7 +62,7 @@ function createTrails() {
     }
 }
 
-function infinityPath(t, scale = 15) {
+function infinityPath(t, scale = 20) {
     const a = scale;
     const b = scale * 0.6;
     
